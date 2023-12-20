@@ -1,0 +1,6 @@
+vscode:
+  extensions:
+    - Vue.volar
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - johnsoncodehk.vscode-typescript-vue-plugin
