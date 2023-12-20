@@ -1,7 +1,8 @@
 {
-  "recommendations": [
-    "Vue.vscode-typescript-vue-plugin",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
-  ]
+	"recommendations": [
+		"Vue.vscode-typescript-vue-plugin",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"Vue.volar"
+	]
 }
