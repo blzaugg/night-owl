@@ -9,9 +9,14 @@
 		},
 		{
 			"path": "./tsconfig.vitest.json"
+		},
+		{
+			"path": "./tsconfig.cypress.json"
 		}
 	],
 	"compilerOptions": {
-		"module": "NodeNext"
-	}
+		"module": "NodeNext",
+		"noImplicitAny": true,
+	},
+	
 }
