@@ -1,3 +1,5 @@
+image: gitpod/workspace-node-18
+
 vscode:
   extensions:
     - Vue.volar
