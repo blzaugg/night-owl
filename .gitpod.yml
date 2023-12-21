@@ -4,3 +4,4 @@ vscode:
     - dbaeumer.vscode-eslint
     - esbenp.prettier-vscode
     - johnsoncodehk.vscode-typescript-vue-plugin
+    - ZixuanChen.vitest-explorer
