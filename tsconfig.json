@@ -16,7 +16,5 @@
 	],
 	"compilerOptions": {
 		"module": "NodeNext",
-		"noImplicitAny": true,
-	},
-	
+	}
 }
