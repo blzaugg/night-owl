@@ -1,7 +1,7 @@
 {
 	"extends": "@tsconfig/node18/tsconfig.json",
 	"include": [
-		"./.eslintrc.cjs",
+		"./eslint.config.ts",
 		"./vite.config.ts",
 		"./vitest.config.ts",
 		"./frontend/vitest.config.ts",

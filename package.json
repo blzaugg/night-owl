@@ -28,7 +28,9 @@
 		"vue-router": "4.2.x"
 	},
 	"devDependencies": {
+		"@eslint/js": "8.56.0",
 		"@tsconfig/node18": "18.x",
+		"@types/eslint": "8.x",
 		"@types/jsdom": "21.x",
 		"@types/node": "18.x",
 		"@typescript-eslint/eslint-plugin": "6.x",

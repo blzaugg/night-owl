@@ -1,6 +1,72 @@
-/* eslint-env node */
+import eslint from '@eslint/js';
+import vueEslintParser from 'vue-eslint-parser';
+import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 
-module.exports = {
+// ESLint Configuration File (9.x preview)
+// See: https://eslint.org/docs/latest/use/configure/configuration-files-new
+export default [
+	/* Global Rules */
+
+	{
+		linterOptions: {
+			// Report unused eslint comments.
+			reportUnusedDisableDirectives: "error",
+		},
+		rules: {
+			// Nothing yet
+		},
+	},
+	eslint.configs.recommended,
+
+	/* Extended Configs */
+	
+	// See: https://typescript-eslint.io/linting/typed-linting
+	typescriptEslintPlugin.configs['recommended-type-checked'],
+
+	{
+		// files: [
+		// 	'./frontend/**/*.vue',
+		// 	'./frontend/**/*.ts',
+		// ],
+		languageOption: {
+			// ecmaVersion: 'latest', // default
+			// See: https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
+			parser: vueEslintParser.parseForESLint,
+			parserOptions: {
+				// See: https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
+				parser: '@typescript-eslint/parser',
+				project: [
+					'./cypress/tsconfig.json',
+					'./frontend/tsconfig.app.json',
+					'./frontend/tsconfig.vitest.json',
+					'./tsconfig.json',
+					'./tsconfig.node.json',
+				],
+				tsconfigRootDir: __dirname,
+			},
+		},
+		plugins: {
+			'@typescript-eslint': typescriptEslintPlugin,
+		},
+		rules: {
+			
+		},
+	},
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+const dummy = {
 	root: true,
 	extends: [
 		'eslint:recommended',
@@ -76,7 +142,7 @@ module.exports = {
 				'vue/no-unsupported-features': [
 					'error',
 					{
-						version: '^3.3.11', // Keep in-sync with package.json.
+						version: '3.3.x', // Keep in-sync with package.json.
 					},
 				],
 				// Disallow undefined SFC properties.
