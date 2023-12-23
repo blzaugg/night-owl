@@ -1,6 +1,6 @@
 {
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
-	"include": ["cypress/**/*.ts"],
+	"include": ["./**/*.ts"],
 	"compilerOptions": {
 		"target": "es5",
     "lib": ["es5", "dom"],

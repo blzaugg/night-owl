@@ -2,17 +2,17 @@
 	"files": [],
 	"references": [
 		{
+			"path": "./cypress/tsconfig.json"
+		},
+		{
+			"path": "./frontend/tsconfig.app.json"
+		},
+		{
+			"path": "./frontend/tsconfig.vitest.json"
+		},
+		{
 			"path": "./tsconfig.node.json"
 		},
-		{
-			"path": "./tsconfig.app.json"
-		},
-		{
-			"path": "./tsconfig.vitest.json"
-		},
-		{
-			"path": "./tsconfig.cypress.json"
-		}
 	],
 	"compilerOptions": {
 		"module": "NodeNext",

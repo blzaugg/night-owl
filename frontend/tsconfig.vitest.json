@@ -4,7 +4,7 @@
 		"@tsconfig/node18/tsconfig.json",
 		"@vue/tsconfig/tsconfig.json",
 	],
-	"exclude": [],
+	"exclude": [], // allow "./src/**/*.spec.*"
 	"compilerOptions": {
 		"composite": true,
 		"lib": [],

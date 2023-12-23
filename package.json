@@ -8,17 +8,19 @@
 		"npm": ">=10"
 	},
 	"scripts": {
-		"dev": "vite",
-		"build": "run-p type-check \"build-only {@}\" --",
-		"preview": "vite preview",
-		"test:unit": "vitest",
-		"test:e2e:init": "sudo apt-get update && sudo apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb && cypress install",
-		"test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
-		"test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-		"build-only": "vite build",
-		"type-check": "vue-tsc --build --force",
-		"lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore",
-		"npm:outdated": "npm outdated"
+		"build": "vite build",
+		"build:type-check": "run-p type-check \"build {@}\" --",
+		"dev": "vite dev",
+		"dev:preview": "vite preview",
+		"lint": "eslint . --ext .vue,.js,.ts --ignore-path .gitignore",
+		"lint:fix": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore",
+		"npm:outdated": "npm outdated",
+		"test:unit": "vitest run --config frontend/vitest.config.ts",
+		"test:unit:watch": "vitest watch --config frontend/vitest.config.ts",
+		"test:unit:coverage": "vitest run --coverage.enabled --config frontend/vitest.config.ts",
+		"test:e2e": "start-server-and-test dev:preview http://localhost:4173 'cypress run --e2e --config-file cypress.config.ts'",
+		"test:e2e:install": "sudo apt-get update && sudo apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb && cypress install",
+		"type-check": "vue-tsc --build --force"
 	},
 	"dependencies": {
 		"pinia": "2.1.x",
@@ -32,6 +34,7 @@
 		"@typescript-eslint/eslint-plugin": "6.x",
 		"@typescript-eslint/parser": "6.x",
 		"@vitejs/plugin-vue": "4.x",
+		"@vitest/coverage-v8": "1.1.0",
 		"@vue/eslint-config-typescript": "12.x",
 		"@vue/test-utils": "2.x",
 		"@vue/tsconfig": "0.x",

@@ -26,7 +26,7 @@ module.exports = {
 		},
 		// Vue
 		{
-			files: ['./**/*.{vue}'],
+			files: ['./frontend/**/*.{vue}'],
 			rules: {
 				// Use `props`, `emit`, etc. variable names consistently.
 				'vue/require-macro-variable-name': 'error',
@@ -138,11 +138,11 @@ module.exports = {
 		// See: https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
 		parser: '@typescript-eslint/parser',
 		project: [
-			// prettier-ignore
-			'./tsconfig.app.json',
+			'./cypress/tsconfig.json',
+			'./frontend/tsconfig.app.json',
+			'./frontend/tsconfig.vitest.json',
+			'./tsconfig.json',
 			'./tsconfig.node.json',
-			'./tsconfig.vitest.json',
-			'./tsconfig.cypress.json',
 		],
 		tsconfigRootDir: __dirname,
 	},

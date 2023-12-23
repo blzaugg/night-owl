@@ -1,10 +1,12 @@
 {
 	"extends": "@tsconfig/node18/tsconfig.json",
 	"include": [
-		".eslintrc.cjs",
-		"vite.config.ts",
-		"vitest.config.ts",
-		"cypress.config.ts"
+		"./.eslintrc.cjs",
+		"./vite.config.ts",
+		"./vitest.config.ts",
+		"./frontend/vitest.config.ts",
+		"./cypress.config.ts",
+		"./cypress/cypress.config.ts",
 	],
 	"compilerOptions": {
 		"composite": true,
