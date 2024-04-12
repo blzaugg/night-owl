@@ -2,6 +2,7 @@
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
 	"include": ["./**/*.ts"],
 	"compilerOptions": {
+		"composite": true,
 		"noEmit": false,
 		"target": "es5",
 		"lib": ["es5", "dom"],
