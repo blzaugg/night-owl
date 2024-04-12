@@ -4,6 +4,6 @@
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
 		"Vue.volar",
-		"zixuanchen.vitest-explorer"
+		"vitest.explorer"
 	]
 }
