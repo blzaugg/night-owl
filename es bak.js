@@ -1,75 +1,9 @@
-import eslint from '@eslint/js';
-import vueEslintParser from 'vue-eslint-parser';
-import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
-
-// ESLint Configuration File (9.x preview)
-// See: https://eslint.org/docs/latest/use/configure/configuration-files-new
-export default [
-	/* Global Rules */
-
-	{
-		linterOptions: {
-			// Report unused eslint comments.
-			reportUnusedDisableDirectives: "error",
-		},
-		rules: {
-			// Nothing yet
-		},
-	},
-	eslint.configs.recommended,
-
-	/* Extended Configs */
-	
-	// See: https://typescript-eslint.io/linting/typed-linting
-	typescriptEslintPlugin.configs['recommended-type-checked'],
-
-	{
-		// files: [
-		// 	'./frontend/**/*.vue',
-		// 	'./frontend/**/*.ts',
-		// ],
-		languageOption: {
-			// ecmaVersion: 'latest', // default
-			// See: https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
-			parser: vueEslintParser.parseForESLint,
-			parserOptions: {
-				// See: https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
-				parser: '@typescript-eslint/parser',
-				project: [
-					'./cypress/tsconfig.json',
-					'./frontend/tsconfig.app.json',
-					'./frontend/tsconfig.vitest.json',
-					'./tsconfig.json',
-					'./tsconfig.node.json',
-				],
-				tsconfigRootDir: __dirname,
-			},
-		},
-		plugins: {
-			'@typescript-eslint': typescriptEslintPlugin,
-		},
-		rules: {
-			
-		},
-	},
-];
-
-
-
-
-
-
-
-
-
-
-
 
 
 const dummy = {
 	root: true,
-	extends: [
-		'eslint:recommended',
+	_extendss: [
+		// 'eslint:recommended',
 		// See: https://typescript-eslint.io/linting/typed-linting
 		'plugin:@typescript-eslint/recommended-type-checked',
 		'plugin:vue/vue3-recommended',
@@ -88,7 +22,7 @@ const dummy = {
 				'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}',
 				'cypress/support/**/*.{js,ts,jsx,tsx}'
 			],
-			extends: ['plugin:cypress/recommended'],
+			_extendss: ['plugin:cypress/recommended'],
 		},
 		// Vue
 		{
