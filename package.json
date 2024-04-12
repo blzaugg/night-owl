@@ -20,7 +20,7 @@
 		"test:unit:coverage": "vitest run --coverage.enabled --config frontend/vitest.config.ts",
 		"test:e2e": "start-server-and-test dev:preview http://localhost:4173 'cypress run --e2e --config-file cypress.config.ts'",
 		"test:e2e:install": "sudo apt-get update && sudo apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb && cypress install",
-		"type-check": "vue-tsc --build --force"
+		"type-check": "vue-tsc --noEmit"
 	},
 	"dependencies": {
 		"pinia": "2.1.x",

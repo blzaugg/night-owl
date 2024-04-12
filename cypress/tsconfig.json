@@ -2,6 +2,7 @@
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
 	"include": ["./**/*.ts"],
 	"compilerOptions": {
+		"noEmit": false,
 		"target": "es5",
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"]
