@@ -7,11 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
 .DS_Store
-dist
-dist-ssr
-coverage
 *.local
 
 /cypress/videos/
@@ -27,4 +23,12 @@ coverage
 *.sln
 *.sw?
 
+# Dev Artifacts
+node_modules
 *.tsbuildinfo
+dist
+dist-ssr
+coverage
+
+# Secrets
+.env
